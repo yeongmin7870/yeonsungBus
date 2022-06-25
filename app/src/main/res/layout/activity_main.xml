@@ -27,29 +27,31 @@
                 android:background="#313957">
 
             </androidx.appcompat.widget.Toolbar>
+
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/custom_app_bar_background"
+                android:orientation="vertical"
                 app:layout_anchor="@+id/appBarLayout"
                 app:layout_anchorGravity="center">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:fontFamily="@font/welcomeotfregular"
                     android:gravity="center_horizontal"
                     android:padding="20dp"
                     android:text="@string/dashboard_heading"
                     android:textColor="#FFFFFF"
-                    android:layout_weight="1"
                     android:textSize="25dp" />
+
                 <ImageView
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/bus2"/>
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/bus2" />
             </LinearLayout>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 

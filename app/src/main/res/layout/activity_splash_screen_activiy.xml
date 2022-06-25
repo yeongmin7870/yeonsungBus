@@ -8,13 +8,25 @@
     android:padding="10dp"
     tools:context=".screen.SplashScreenActivity">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="200dp"
         android:layout_weight="1"
         android:src="@drawable/yeonsungsplash" />
-
+        <ImageView
+            android:layout_marginTop="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/busback"
+            android:alpha="0.2"/>
+    </FrameLayout>
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
