@@ -43,12 +43,12 @@
                     android:padding="20dp"
                     android:text="@string/dashboard_heading"
                     android:textColor="@color/white"
+                    android:layout_weight="1"
                     android:textSize="25dp" />
                 <ImageView
-                    android:layout_marginTop="610dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/bus"/>
             </LinearLayout>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
