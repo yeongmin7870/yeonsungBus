@@ -20,10 +20,10 @@
         <activity
             android:name=".screen.LongDistanceBusActivity"
             android:exported="false" />
-        <activit
+        <activity
             android:name=".screen.MainActivity"
             android:exported="false">
-        </activit>
+        </activity>
     </application>
 
 </manifest>

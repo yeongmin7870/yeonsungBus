@@ -4,32 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEEFEF"
+    android:background="@color/white"
     android:orientation="vertical"
-    android:padding="10dp"
     tools:context=".screen.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@color/black">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/white"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            >
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <LinearLayout
+
+            <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:background="@drawable/custom_app_bar_background"></LinearLayout>
+                android:layout_height="?attr/actionBarSize"
+                android:background="#313957">
 
+            </androidx.appcompat.widget.Toolbar>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_app_bar_background"
+                app:layout_anchor="@+id/appBarLayout"
+                app:layout_anchorGravity="center">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/welcomeotfregular"
+                    android:gravity="center_horizontal"
+                    android:padding="20dp"
+                    android:text="@string/dashboard_heading"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+                <ImageView
+                    android:layout_marginTop="610dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/bus"/>
+            </LinearLayout>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/welcomeotfregular"
+            android:padding="10dp"
+            android:text="@string/dummyText"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+    </androidx.core.widget.NestedScrollView>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
