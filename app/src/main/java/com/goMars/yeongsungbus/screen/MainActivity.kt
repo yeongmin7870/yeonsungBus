@@ -54,8 +54,7 @@ class MainActivity : AppCompatActivity() {
             ObjectAnimator.ofFloat(binding.fabpay, "translationY", 0f).apply { start() }
             ObjectAnimator.ofFloat(binding.fabhuman, "translationY", 0f).apply { start() }
             ObjectAnimator.ofFloat(binding.fabadd, View.ROTATION, 45f, 0f).apply { start() }
-            binding.fabhuman.visibility = View.GONE
-            binding.fabpay.visibility = View.GONE
+
 
         } else { // 플로팅 액션 버튼 열기 - 닫혀있는 플로팅 버튼 꺼내는 애니메이션
             ObjectAnimator.ofFloat(binding.fabpay, "translationY", -360f).apply { start() }

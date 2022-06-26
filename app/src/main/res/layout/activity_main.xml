@@ -164,10 +164,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:src="@drawable/human"
-        android:alpha="0.45"
         android:backgroundTint="#03E0F4"
         android:layout_margin="16dp"
-        android:visibility="gone"/>
+      />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabpay"
@@ -175,10 +174,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:src="@drawable/pay"
-        android:alpha="0.45"
         android:backgroundTint="#03E0F4"
         android:layout_margin="16dp"
-        android:visibility="gone"/>
+       />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabadd"
@@ -186,7 +184,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:src="@drawable/add"
-        android:alpha="0.45"
         app:rippleColor="@color/purple_200"
         android:backgroundTint="#03E0F4"
         android:layout_margin="16dp"
