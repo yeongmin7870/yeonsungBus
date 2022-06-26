@@ -9,7 +9,6 @@ import com.goMars.yeongsungbus.R
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportActionBar?.hide()
         setContentView(R.layout.activity_splash_screen_activiy)
 
         Handler().postDelayed({
