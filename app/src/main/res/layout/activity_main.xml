@@ -157,6 +157,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabhuman"
         android:layout_width="wrap_content"
@@ -168,6 +169,16 @@
         android:layout_margin="16dp"
         android:visibility="gone"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabpay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/pay"
+        android:alpha="0.45"
+        android:backgroundTint="#03E0F4"
+        android:layout_margin="16dp"
+        android:visibility="gone"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabadd"
@@ -203,3 +214,4 @@
     <!--<a target="_blank" href="https://icons8.com/icon/oYib218o99hK/search">Search</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>-->
     <!--<a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by Smashicons - Flaticon</a>-->
     <!--<a href="https://www.flaticon.com/free-icons/it-support" title="it support icons">It support icons created by Freepik - Flaticon</a> -->
+    <!--<a href="https://www.flaticon.com/free-icons/cash-machine" title="cash machine icons">Cash machine icons created by Freepik - Flaticon</a>-->

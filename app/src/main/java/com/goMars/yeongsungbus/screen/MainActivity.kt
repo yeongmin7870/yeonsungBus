@@ -33,30 +33,32 @@ class MainActivity : AppCompatActivity() {
             toggleFab()
         }
 
-        // 플로팅 버튼 클릭 이벤트 - 캡처
+        // 플로팅 버튼 클릭 이벤트 - 개발자
         binding.fabhuman.setOnClickListener {
             Toast.makeText(applicationContext, "개발자 버튼 클릭!", Toast.LENGTH_SHORT).show()
+        }
+        // 플로팅 버튼 클릭 이벤트 - payco
+        binding.fabpay.setOnClickListener {
+            Toast.makeText(applicationContext, "결제 버튼 클릭!", Toast.LENGTH_SHORT).show()
         }
 
     }
 
 
 
-
-
-
-
-
-
     private fun toggleFab() {
         binding.fabhuman.visibility = View.VISIBLE
+        binding.fabpay.visibility = View.VISIBLE
         // 플로팅 액션 버튼 닫기 - 열려있는 플로팅 버튼 집어넣는 애니메이션
         if (isFabOpen) {
+            ObjectAnimator.ofFloat(binding.fabpay, "translationY", 0f).apply { start() }
             ObjectAnimator.ofFloat(binding.fabhuman, "translationY", 0f).apply { start() }
             ObjectAnimator.ofFloat(binding.fabadd, View.ROTATION, 45f, 0f).apply { start() }
             binding.fabhuman.visibility = View.GONE
+            binding.fabpay.visibility = View.GONE
 
         } else { // 플로팅 액션 버튼 열기 - 닫혀있는 플로팅 버튼 꺼내는 애니메이션
+            ObjectAnimator.ofFloat(binding.fabpay, "translationY", -360f).apply { start() }
             ObjectAnimator.ofFloat(binding.fabhuman, "translationY", -180f).apply { start() }
             ObjectAnimator.ofFloat(binding.fabadd, View.ROTATION, 0f, 45f).apply { start() }
         }
