@@ -7,9 +7,12 @@
         <entry key="app/src/main/res/drawable/background_splash.xml" value="0.2075" />
         <entry key="app/src/main/res/drawable/backgrounsplash.xml" value="0.18" />
         <entry key="app/src/main/res/drawable/border.xml" value="0.187" />
+        <entry key="app/src/main/res/drawable/circle_background.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/custom_app_bar_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_bus.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2075" />
+        <entry key="app/src/main/res/drawable/search.xml" value="0.187" />
+        <entry key="app/src/main/res/drawable/titlecircle_background.xml" value="0.187" />
         <entry key="app/src/main/res/font/font.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/activity_longDistancebusactivity.xml" value="0.21122112211221122" />
         <entry key="app/src/main/res/layout/activity_longdistancebus.xml" value="0.2" />
