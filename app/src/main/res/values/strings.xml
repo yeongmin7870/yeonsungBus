@@ -2,7 +2,7 @@
     <string name="app_name">타고가요 연성대스쿨버스</string>
     <string name="dashboard_heading" >내 위치 버스 추천</string>
     <string name="dashboard_scroll_after">버스 정보</string>
-    <string name="location">현재 위치</string>
+    <string name="location">버스 노선 이름</string>
     <string name="enter_address">주소를 입력해주세요</string>
     <string name="dummyText">
 
