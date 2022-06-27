@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".screen.MainActivity">
+    tools:context=".screen.MainActivity"
+    >
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -167,12 +168,13 @@
                     </LinearLayout>
 
                     <ImageView
+                        android:id="@+id/busimg"
                         android:layout_width="20dp"
                         android:layout_height="30dp"
                         android:layout_alignParentBottom="true"
                         android:layout_centerInParent="true"
-                        android:layout_centerHorizontal="true"
                         android:src="@drawable/bluebus" />
+
                 </RelativeLayout>
             </LinearLayout>
 
@@ -244,7 +246,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        android:backgroundTint="#9FC0F9"
+        app:backgroundTint="#9FC0F9"
         android:src="@drawable/human" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -253,7 +255,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        android:backgroundTint="#9FC0F9"
+        app:backgroundTint="#9FC0F9"
         android:src="@drawable/pay" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -262,9 +264,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        android:backgroundTint="#9FC0F9"
+        app:backgroundTint="#9FC0F9"
         android:src="@drawable/add"
-        app:rippleColor="#3C7FF8" />
+        />
 
 
     <androidx.core.widget.NestedScrollView
