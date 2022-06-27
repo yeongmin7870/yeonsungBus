@@ -5,9 +5,9 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TabHost
-import android.widget.TabHost.TabSpec
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.collapsingToolbarLayout.setCollapsedTitleTextColor(Color.WHITE)
 
-
+        var count: Int = 0 // collapse 닫힌거 확인
         val tabhost: TabHost = findViewById<TabHost>(R.id.tabhost)
         tabhost.setup()
 
@@ -48,6 +48,9 @@ class MainActivity : AppCompatActivity() {
         tab3.setContent(R.id.linear3) // 표시될 레이아웃 아이디
         tabhost.addTab(tab3) //탭호스트에 추가
 
+        val location = IntArray(2) //좌표배열
+        var x = location[0]
+        var y = location[1]
 
 
         tabhost.currentTab = 0
@@ -65,22 +68,36 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "결제 버튼 클릭!", Toast.LENGTH_SHORT).show()
         }
 
-        binding.collapsingToolbarLayout.scrollTo(0,100)
-
 
         // appbarlayout을 접었을때와 폈을때를 감지하는 메소드
         binding.appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener() { appBarLayout: AppBarLayout?, verticalOffset: Int ->
 
-                if (Math.abs(verticalOffset) - appBarLayout!!.totalScrollRange == 0) {
+            if (Math.abs(verticalOffset) - appBarLayout!!.totalScrollRange == 0) { //닫혀있을때
+                count += 1
+            }
 
-                } else {
+            if (count >= 1) {
+                if (Math.abs(verticalOffset) - appBarLayout!!.totalScrollRange != 0) { //열렸을때
+                    count += 1
+                    Log.d(Tag, y.toString())
+                    binding.busimg.getLocationOnScreen(location) //뷰 좌표 설정
+                    x = location[0]
+                    y = location[1]
+                    Log.d(Tag, y.toString()) //좌표값 얻는 메소드
 
 
+                    if (y >= 2000) {
+                        startActivity(Intent(this, MainActivity::class.java))
+                        overridePendingTransition(R.anim.slide_up_in, R.anim.slide_up_out)
+                        count = 0
+                        finish()
+
+                    }
                 }
+            }
         })
 
     }
-
 
 
     private fun toggleFab() {
