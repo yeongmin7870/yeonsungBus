@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "결제 버튼 클릭!", Toast.LENGTH_SHORT).show()
         }
 
-        binding.collapsingToolbarLayout.scrollTo(0,0)
+        binding.collapsingToolbarLayout.scrollTo(0,100)
 
 
         // appbarlayout을 접었을때와 폈을때를 감지하는 메소드
