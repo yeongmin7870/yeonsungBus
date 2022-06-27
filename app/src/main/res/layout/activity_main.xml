@@ -11,7 +11,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="660dp"
         android:background="@color/black">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -39,81 +39,74 @@
                     android:layout_height="match_parent">
 
 
-                    <com.google.android.material.imageview.ShapeableImageView
+                    <ImageView
                         android:id="@+id/img_line"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/subway" />
+                        android:src="@drawable/subway"
+                        app:shapeAppearanceOverlay="@style/circleImageView" />
 
-                    <TextView
-                        android:id="@+id/linename"
-                        android:layout_width="250dp"
-                        android:layout_height="30dp"
-                        android:layout_below="@+id/img_line"
-                        android:layout_centerInParent="true"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/titlecircle_background"
-                        android:fontFamily="@font/welcomeotfregular"
-                        android:gravity="center"
-                        android:text="통학버스 노선 이름"
-                        android:textColor="@color/white"
-                        android:textSize="13dp" />
-
-                    <TableLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_below="@+id/linename"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:layout_marginBottom="30dp">
+                        android:layout_height="200dp"
+                        android:layout_below="@id/img_line"
+                        android:background="#FFFFFF">
 
-                        <TableRow>
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/img_line"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginBottom="30dp">
 
-                            <TextView
-                                android:background="@drawable/border"
-                                android:text="현재 오는 시간"
-                                android:fontFamily="@font/welcomeotfregular"
-                                android:textColor="@color/white"
-                                android:textSize="15dp" />
+                            <TableRow>
 
-                            <TextView
-                                android:background="@drawable/border"
-                                android:text="몇 분 전입니다"
-                                android:textColor="@color/white"
-                                android:fontFamily="@font/welcomeotfregular"
-                                android:textSize="15dp" />
-                        </TableRow>
+                                <TextView
+                                    android:background="@drawable/border"
+                                    android:fontFamily="@font/welcomeotfregular"
+                                    android:text="현재 오는 시간"
+                                    android:textColor="#4C5E7B"
+                                    android:textSize="15dp" />
 
-                        <TableRow>
+                                <TextView
+                                    android:background="@drawable/border"
+                                    android:fontFamily="@font/welcomeotfregular"
+                                    android:text="몇 분 전입니다"
+                                    android:textColor="#4C5E7B"
+                                    android:textSize="15dp" />
+                            </TableRow>
 
-                            <TextView
-                                android:background="@drawable/border"
-                                android:text="다음 오는 시간"
-                                android:fontFamily="@font/welcomeotfregular"
-                                android:textColor="@color/white"
-                                android:textSize="15dp" />
+                            <TableRow>
 
-                            <TextView
-                                android:background="@drawable/border"
-                                android:text="몇 분 전입니다"
-                                android:fontFamily="@font/welcomeotfregular"
-                                android:textColor="@color/white"
-                                android:textSize="15dp" />
-                        </TableRow>
-                    </TableLayout>
+                                <TextView
+                                    android:background="@drawable/border"
+                                    android:fontFamily="@font/welcomeotfregular"
+                                    android:text="다음 오는 시간"
+                                    android:textColor="#4C5E7B"
+                                    android:textSize="15dp" />
 
+                                <TextView
+                                    android:background="@drawable/border"
+                                    android:fontFamily="@font/welcomeotfregular"
+                                    android:text="몇 분 전입니다"
+                                    android:textColor="#4C5E7B"
+                                    android:textSize="15dp" />
+                            </TableRow>
+                        </TableLayout>
+
+                    </LinearLayout>
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_alignParentBottom="true"
                         android:layout_centerInParent="true"
+                        android:background="#07B3B7"
                         android:src="@drawable/bus2" />
                 </RelativeLayout>
             </LinearLayout>
@@ -122,48 +115,55 @@
                 android:id="@+id/collapsing_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#313957">
+                android:background="#F6FAFF">
+
                 <FrameLayout
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="right"
-                    android:layout_margin="13dp"
-                    android:alpha="0.8"
-                    >
+                    android:layout_margin="5dp"
+                    android:alpha="0.8">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/circle_background" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_baseline_search_24" />
                 </FrameLayout>
+
                 <FrameLayout
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="left"
-                    android:layout_margin="13dp"
-                    android:alpha="0.8"
-                    >
+                    android:layout_margin="5dp"
+                    android:alpha="0.8">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/circle_background" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_baseline_gps_not_fixed_24" />
                 </FrameLayout>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/titlecircle_background"
                     android:fontFamily="@font/welcomeotfregular"
                     android:gravity="center"
-                    android:text="@string/dashboard_heading"
-                    android:background="@drawable/titlecircle_background"
-                    android:textColor="@color/white"
+                    android:text="@string/location"
+                    android:textColor="#ECF7FF"
                     android:textSize="15dp" />
+
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -179,7 +179,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        android:backgroundTint="#03E0F4"
+        android:backgroundTint="#9FC0F9"
         android:src="@drawable/human" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -188,7 +188,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        android:backgroundTint="#03E0F4"
+        android:backgroundTint="#9FC0F9"
         android:src="@drawable/pay" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -197,15 +197,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        android:backgroundTint="#03E0F4"
+        android:backgroundTint="#9FC0F9"
         android:src="@drawable/add"
-        app:rippleColor="@color/purple_200" />
+        app:rippleColor="#3C7FF8" />
 
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nesetedScrollViewContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#F6F6F6"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <TextView
