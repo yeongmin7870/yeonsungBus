@@ -79,11 +79,9 @@ class MainActivity : AppCompatActivity() {
             if (count >= 1) {
                 if (Math.abs(verticalOffset) - appBarLayout!!.totalScrollRange != 0) { //열렸을때
                     count += 1
-                    Log.d(Tag, y.toString())
                     binding.busimg.getLocationOnScreen(location) //뷰 좌표 설정
                     x = location[0]
                     y = location[1]
-                    Log.d(Tag, y.toString()) //좌표값 얻는 메소드
 
 
                     if (y >= 2000) {
