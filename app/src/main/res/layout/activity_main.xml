@@ -8,10 +8,11 @@
     android:orientation="vertical"
     tools:context=".screen.MainActivity">
 
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="660dp"
+        android:layout_height="match_parent"
         android:background="@color/black">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -21,7 +22,6 @@
             android:background="@color/white"
             app:expandedTitleTextAppearance="@style/expandedBarTextStyle"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
 
             <LinearLayout
                 android:id="@+id/linear_layout_screen"
@@ -36,7 +36,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="20dp">
+                    android:padding="10dp">
 
                     <TextView
                         android:id="@+id/yourroute"
@@ -219,6 +219,7 @@
                         android:src="@drawable/circle_background" />
 
                     <ImageView
+                        android:id="@+id/img_gps"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_baseline_gps_not_fixed_24" />
@@ -241,8 +242,8 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
 
-    </com.google.android.material.appbar.AppBarLayout>
 
+    </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabhuman"

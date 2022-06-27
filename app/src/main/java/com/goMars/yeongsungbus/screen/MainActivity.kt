@@ -13,6 +13,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.goMars.yeongsungbus.R
 import com.goMars.yeongsungbus.databinding.ActivityMainBinding
+import com.google.android.material.appbar.AppBarLayout
 
 class MainActivity : AppCompatActivity() {
     val Tag: String = "MainActivityTest"
@@ -64,6 +65,20 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "결제 버튼 클릭!", Toast.LENGTH_SHORT).show()
         }
 
+        binding.collapsingToolbarLayout.scrollTo(0,0)
+
+
+        // appbarlayout을 접었을때와 폈을때를 감지하는 메소드
+        binding.appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener() { appBarLayout: AppBarLayout?, verticalOffset: Int ->
+
+                if (Math.abs(verticalOffset) - appBarLayout!!.totalScrollRange == 0) {
+
+                } else {
+
+
+                }
+        })
+
     }
 
 
@@ -85,11 +100,7 @@ class MainActivity : AppCompatActivity() {
         isFabOpen = !isFabOpen
     }
 
-    val btnListener : View.OnClickListener = View.OnClickListener {
-        startActivity(Intent(this,LongDistanceBusActivity::class.java))
-    }
-
-
 
 }
+
 
