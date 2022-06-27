@@ -43,26 +43,34 @@
                         android:layout_width="350dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/welcomebold"
-                        android:text="Your route"
+                        android:text="경로"
                         android:textSize="15dp" />
 
                     <ImageView
                         android:id="@+id/img_line"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
+                        android:layout_below="@+id/yourroute"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:layout_below="@+id/yourroute"
                         android:scaleType="fitXY"
                         android:src="@drawable/subway"
                         app:shapeAppearanceOverlay="@style/circleImageView" />
 
-
+                    <TextView
+                        android:id="@+id/yourroute2"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_line"
+                        android:fontFamily="@font/welcomebold"
+                        android:text="시간"
+                        android:textSize="15dp" />
 
                     <LinearLayout
+                        android:id="@+id/tablecontent"
                         android:layout_width="350dp"
-                        android:layout_height="200dp"
-                        android:layout_below="@id/img_line"
+                        android:layout_height="100dp"
+                        android:layout_below="@+id/yourroute2"
                         android:layout_centerInParent="true"
                         android:background="@drawable/border">
 
@@ -113,10 +121,11 @@
                     </LinearLayout>
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentBottom="true"
                         android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
                         android:src="@drawable/bluebus" />
                 </RelativeLayout>
             </LinearLayout>
