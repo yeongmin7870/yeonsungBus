@@ -5,15 +5,12 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
+import android.widget.TabHost
+import android.widget.TabHost.TabSpec
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import com.goMars.yeongsungbus.R
 import com.goMars.yeongsungbus.databinding.ActivityMainBinding
 
@@ -22,12 +19,37 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var isFabOpen = false // Fab 버튼 default는 닫혀있음
 
+
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.collapsingToolbarLayout.setCollapsedTitleTextColor(Color.WHITE)
+
+
+        val tabhost: TabHost = findViewById<TabHost>(R.id.tabhost)
+        tabhost.setup()
+
+        val tab1 = tabhost.newTabSpec("안양") //구분할때 사용하는 것
+        tab1.setIndicator("안양") //표시될 이름
+        tab1.setContent(R.id.linear1) // 표시될 레이아웃 아이디
+        tabhost.addTab(tab1) //탭호스트에 추가
+
+        val tab2 = tabhost.newTabSpec("범계") //구분할때 사용하는 것
+        tab2.setIndicator("범계") //표시될 이름
+        tab2.setContent(R.id.linear2) // 표시될 레이아웃 아이디
+        tabhost.addTab(tab2) //탭호스트에 추가
+
+        val tab3 = tabhost.newTabSpec("시외") //구분할때 사용하는 것
+        tab3.setIndicator("장거리") //표시될 이름
+        tab3.setContent(R.id.linear3) // 표시될 레이아웃 아이디
+        tabhost.addTab(tab3) //탭호스트에 추가
+
+
+
+        tabhost.currentTab = 0
 
         binding.fabadd.setOnClickListener {
             toggleFab()
@@ -47,8 +69,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun toggleFab() {
-        binding.fabhuman.visibility = View.VISIBLE
-        binding.fabpay.visibility = View.VISIBLE
+
         // 플로팅 액션 버튼 닫기 - 열려있는 플로팅 버튼 집어넣는 애니메이션
         if (isFabOpen) {
             ObjectAnimator.ofFloat(binding.fabpay, "translationY", 0f).apply { start() }

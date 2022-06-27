@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".screen.MainActivity"
-    >
+    tools:context=".screen.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -136,34 +135,38 @@
                         android:layout_height="160dp"
                         android:layout_below="@+id/yourroute3"
                         android:layout_centerInParent="true"
+                        android:background="@drawable/border"
                         android:orientation="horizontal"
-                        android:weightSum="2"
-                        android:background="@drawable/border">
+                        android:weightSum="2">
+
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:src="@drawable/bustest"
-                            android:scaleType="fitXY"/>
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bustest" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
                             android:src="#EFA8A8">
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:text="정류장 이름"
                                 android:fontFamily="@font/welcomeotfregular"
-                                android:gravity="center"/>
+                                android:gravity="center"
+                                android:text="정류장 이름" />
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:textSize="10dp"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:gravity="center"
                                 android:text="정류장 주소"
-                                android:fontFamily="@font/welcomeotfregular"
-                                android:gravity="center"/>
+                                android:textSize="10dp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -174,6 +177,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_centerInParent="true"
                         android:src="@drawable/bluebus" />
+
 
                 </RelativeLayout>
             </LinearLayout>
@@ -246,8 +250,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        app:backgroundTint="#9FC0F9"
-        android:src="@drawable/human" />
+        android:src="@drawable/human"
+        app:backgroundTint="#9FC0F9" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabpay"
@@ -255,8 +259,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        app:backgroundTint="#9FC0F9"
-        android:src="@drawable/pay" />
+        android:src="@drawable/pay"
+        app:backgroundTint="#9FC0F9" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabadd"
@@ -264,9 +268,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        app:backgroundTint="#9FC0F9"
         android:src="@drawable/add"
-        />
+        app:backgroundTint="#9FC0F9" />
 
 
     <androidx.core.widget.NestedScrollView
@@ -276,14 +279,286 @@
         android:background="#F6F6F6"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <TextView
+        <TabHost
+            android:id="@+id/tabhost"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/welcomeotfregular"
-            android:padding="10dp"
-            android:text="@string/dummyText"
-            android:textColor="@color/black"
-            android:textSize="25dp" />
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/linear1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#9EC0FC"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:id="@+id/evening"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@id/linear1"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/evening" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:padding="10dp"
+                                android:text="첫차 08:30"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:padding="10dp"
+                                android:text="막차 08:30"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/lunch" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:padding="10dp"
+                                android:text="첫차 12:30"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:padding="10dp"
+                                android:text="막차 13:15"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/dinner" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:padding="10dp"
+                                android:text="첫차 17:00"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:padding="10dp"
+                                android:text="막차 18:00"
+                                android:textColor="@color/black"
+                                android:textSize="17sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:text="운행구간:  안양역 ↔ 연성대학교"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:text="소요시간: 5분"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:text="배차간격: 오전6분, 낮15분, 오후15분"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:text="이용요금: 무료"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:text="탑승위치: 안양역 1번출구 스쿨버스 승강장, 정문 학생복지센터 앞"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:text="이용문의: 학생취업처"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/welcomeotfregular"
+                                android:text="문의전화: 031-441-1064"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:background="#9EC0FC"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#AA096D"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/welcomeotfregular"
+                            android:padding="10dp"
+                            android:text="@string/dummyText"
+                            android:textColor="@color/black"
+                            android:textSize="25dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFF1C4"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/welcomeotfregular"
+                            android:padding="10dp"
+                            android:text="@string/dummyText"
+                            android:textColor="@color/black"
+                            android:textSize="25dp" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </TabHost>
+
     </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
