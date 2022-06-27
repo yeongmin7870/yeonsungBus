@@ -33,11 +33,18 @@
                 app:layout_anchor="@+id/appBarLayout"
                 app:layout_anchorGravity="center">
 
-
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:padding="20dp"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/yourroute"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/welcomebold"
+                        android:text="Your route"
+                        android:textSize="15dp" />
 
                     <ImageView
                         android:id="@+id/img_line"
@@ -45,15 +52,19 @@
                         android:layout_height="200dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
+                        android:layout_below="@+id/yourroute"
                         android:scaleType="fitXY"
                         android:src="@drawable/subway"
                         app:shapeAppearanceOverlay="@style/circleImageView" />
 
+
+
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="350dp"
                         android:layout_height="200dp"
                         android:layout_below="@id/img_line"
-                        android:background="#FFFFFF">
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/border">
 
                         <TableLayout
                             android:layout_width="match_parent"
