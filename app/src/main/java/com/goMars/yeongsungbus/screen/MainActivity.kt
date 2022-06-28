@@ -5,15 +5,18 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
+import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.LinearLayout
+import android.widget.PopupWindow
 import android.widget.TabHost
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.goMars.yeongsungbus.R
 import com.goMars.yeongsungbus.databinding.ActivityMainBinding
-import com.google.android.material.appbar.AppBarLayout
+
 
 class MainActivity : AppCompatActivity() {
     val Tag: String = "MainActivityTest"
@@ -68,34 +71,41 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "결제 버튼 클릭!", Toast.LENGTH_SHORT).show()
         }
 
+        val btnfloating = arrayOf(binding.fabhuman,binding.fabpay) //floating button 클릭 리스너
+        for(i:Int in 0 until btnfloating.size) {
+            btnfloating[i].setOnClickListener(fabListener)
+        }
 
-        // appbarlayout을 접었을때와 폈을때를 감지하는 메소드
-        binding.appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener() { appBarLayout: AppBarLayout?, verticalOffset: Int ->
-
-            if (Math.abs(verticalOffset) - appBarLayout!!.totalScrollRange == 0) { //닫혀있을때
-                count += 1
-            }
-
-            if (count >= 1) {
-                if (Math.abs(verticalOffset) - appBarLayout!!.totalScrollRange != 0) { //열렸을때
-                    count += 1
-                    binding.busimg.getLocationOnScreen(location) //뷰 좌표 설정
-                    x = location[0]
-                    y = location[1]
-
-
-                    if (y >= 2000) {
-                        startActivity(Intent(this, MainActivity::class.java))
-                        overridePendingTransition(R.anim.slide_up_in, R.anim.slide_up_out)
-                        count = 0
-                        finish()
-
-                    }
-                }
-            }
-        })
 
     }
+
+
+    // fab 버튼 클릭했을때
+    private val fabListener : View.OnClickListener = View.OnClickListener { view: View? ->
+        when(view?.id){
+            R.id.fabhuman -> {
+                val inflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
+                val popupView: View = inflater.inflate(R.layout.activity_popup, null)
+
+                var width : Int = LinearLayout.LayoutParams.MATCH_PARENT
+                var height : Int = LinearLayout.LayoutParams.MATCH_PARENT
+                var popupWindow : PopupWindow = PopupWindow(popupView,width,height)
+
+                popupWindow.showAtLocation(view, Gravity.CENTER,0,0)
+                popupView.setOnTouchListener(View.OnTouchListener(){
+                    view, motionEvent ->
+                    popupWindow.dismiss()
+                    return@OnTouchListener true
+                })
+
+            }
+            R.id.fabpay -> {
+                startActivity(Intent(this, LongDistanceBusActivity::class.java))
+                overridePendingTransition(R.anim.slide_up_out,R.anim.slide_up_in)
+            }
+        }
+    }
+
 
 
     private fun toggleFab() {

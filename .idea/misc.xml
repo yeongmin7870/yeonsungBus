@@ -13,6 +13,7 @@
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/ic_bus.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2075" />
+        <entry key="app/src/main/res/drawable/popup.xml" value="0.2075" />
         <entry key="app/src/main/res/drawable/search.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/titlecircle_background.xml" value="0.187" />
         <entry key="app/src/main/res/font/font.xml" value="0.23020833333333332" />
@@ -20,6 +21,7 @@
         <entry key="app/src/main/res/layout/activity_longdistancebus.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_payco.xml" value="0.2807971014492754" />
+        <entry key="app/src/main/res/layout/activity_popup.xml" value="0.1859375" />
         <entry key="app/src/main/res/layout/activity_splash_screen_activiy.xml" value="0.2" />
         <entry key="app/src/main/res/layout/splash.xml" value="0.2" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.25" />

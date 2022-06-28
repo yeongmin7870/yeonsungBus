@@ -44,6 +44,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/welcomebold"
                         android:text="버스위치"
+                        android:layout_marginTop="5dp"
                         android:textSize="15dp" />
 
                     <ImageView
@@ -61,6 +62,7 @@
                     <TextView
                         android:id="@+id/yourroute2"
                         android:layout_width="350dp"
+                        android:layout_marginTop="30dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/img_line"
                         android:fontFamily="@font/welcomebold"
@@ -124,6 +126,7 @@
                     <TextView
                         android:id="@+id/yourroute3"
                         android:layout_width="350dp"
+                        android:layout_marginTop="30dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/tablecontent"
                         android:fontFamily="@font/welcomebold"
