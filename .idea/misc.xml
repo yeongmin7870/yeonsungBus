@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/drawable/border.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/circle_background.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/custom_app_bar_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1535" />
         <entry key="app/src/main/res/drawable/ic_baseline_gps_not_fixed_24.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/ic_bus.xml" value="0.1515" />
@@ -18,7 +19,7 @@
         <entry key="app/src/main/res/drawable/titlecircle_background.xml" value="0.187" />
         <entry key="app/src/main/res/font/font.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/activity_longDistancebusactivity.xml" value="0.21122112211221122" />
-        <entry key="app/src/main/res/layout/activity_longdistancebus.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_longdistancebus.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_payco.xml" value="0.2807971014492754" />
         <entry key="app/src/main/res/layout/activity_popup.xml" value="0.1859375" />
