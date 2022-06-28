@@ -237,7 +237,7 @@
                     android:fontFamily="@font/welcomeotfregular"
                     android:gravity="center"
                     android:text="@string/location"
-                    android:textColor="#ECF7FF"
+                    android:textColor="#FF258AFB"
                     android:textSize="15dp" />
 
 
