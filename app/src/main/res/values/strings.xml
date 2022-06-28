@@ -3,6 +3,7 @@
     <string name="dashboard_heading" >내 위치 버스 추천</string>
     <string name="dashboard_scroll_after">버스 정보</string>
     <string name="location">버스 노선 이름</string>
+    <string name="pay">장거리 통학버스 티켓예약</string>
     <string name="enter_address">주소를 입력해주세요</string>
     <string name="makePeople">개발자:\n\n 연성대 2018100280 박영민\n 연성대 2018100272 양석준\n\n 개선사항 및 의견을 플레이스토어 리뷰에 적어주시면 큰 도움이 됩니다.</string>
     <string name="dummyText">

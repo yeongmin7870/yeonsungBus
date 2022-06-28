@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.goMars.yeongsungbus">
-
+    <queries>
+        <package android:name="com.nhnent.payapp" />
+    </queries>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_yeonsung"
@@ -9,6 +11,10 @@
         android:roundIcon="@mipmap/ic_yeonsung_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.YeongsungBus">
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/floating_button" />
+
         <activity
             android:name=".screen.SplashScreenActivity"
             android:exported="true">
@@ -22,8 +28,7 @@
             android:exported="false" />
         <activity
             android:name=".screen.MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
     </application>
 
 </manifest>

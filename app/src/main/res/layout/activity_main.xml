@@ -42,14 +42,13 @@
                         android:id="@+id/yourroute"
                         android:layout_width="350dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/welcomebold"
                         android:text="버스위치"
-                        android:layout_marginTop="5dp"
                         android:textSize="15dp" />
 
                     <ImageView
                         android:id="@+id/img_line"
-                        android:transitionName="img_line"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:layout_below="@+id/yourroute"
@@ -57,14 +56,15 @@
                         android:layout_marginBottom="8dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/subway"
+                        android:transitionName="img_line"
                         app:shapeAppearanceOverlay="@style/circleImageView" />
 
                     <TextView
                         android:id="@+id/yourroute2"
                         android:layout_width="350dp"
-                        android:layout_marginTop="30dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/img_line"
+                        android:layout_marginTop="30dp"
                         android:fontFamily="@font/welcomebold"
                         android:text="시간"
                         android:textSize="15dp" />
@@ -126,9 +126,9 @@
                     <TextView
                         android:id="@+id/yourroute3"
                         android:layout_width="350dp"
-                        android:layout_marginTop="30dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/tablecontent"
+                        android:layout_marginTop="30dp"
                         android:fontFamily="@font/welcomebold"
                         android:text="정류장위치"
                         android:textSize="15dp" />
@@ -246,35 +246,7 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
 
-
     </com.google.android.material.appbar.AppBarLayout>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabhuman"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        android:src="@drawable/human"
-        app:backgroundTint="#9FC0F9" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabpay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        android:src="@drawable/pay"
-        app:backgroundTint="#9FC0F9" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabadd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        android:src="@drawable/add"
-        app:backgroundTint="#9FC0F9" />
 
 
     <androidx.core.widget.NestedScrollView
@@ -318,8 +290,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="10dp">
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
                             <ImageView
                                 android:id="@+id/evening"
@@ -355,8 +327,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="10dp">
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
                             <ImageView
                                 android:layout_width="wrap_content"
@@ -390,8 +362,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="10dp">
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
                             <ImageView
                                 android:layout_width="wrap_content"
@@ -472,6 +444,10 @@
 
     </androidx.core.widget.NestedScrollView>
 
+    <include
+        android:id="@+id/fabcommon"
+        layout="@layout/floating_button" />
+    <!--floating button include-->
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <!--<a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by Smashicons - Flaticon</a>-->

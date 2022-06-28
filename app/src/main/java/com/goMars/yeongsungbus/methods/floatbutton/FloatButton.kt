@@ -1,67 +1,22 @@
-package com.goMars.yeongsungbus.screen
+package com.goMars.yeongsungbus.methods.floatbutton
 
 import android.animation.ObjectAnimator
-import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.LinearLayout
+import android.widget.PopupWindow
 import com.goMars.yeongsungbus.R
 import com.goMars.yeongsungbus.databinding.ActivityMainBinding
-import com.goMars.yeongsungbus.methods.floatbutton.FloatButton
+import com.goMars.yeongsungbus.screen.LongDistanceBusActivity
+import com.goMars.yeongsungbus.screen.MainActivity
 
 
-open class MainActivity : AppCompatActivity() {
-    val Tag: String = "MainActivityTest"
-    public lateinit var binding: ActivityMainBinding
-    public var isFabOpen = false // Fab 버튼 default는 닫혀있음
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        val tabhost: TabHost = findViewById<TabHost>(R.id.tabhost)
-        tabhost.setup()
-
-        val tab1 = tabhost.newTabSpec("안양") //구분할때 사용하는 것
-        tab1.setIndicator("안양") //표시될 이름
-        tab1.setContent(R.id.linear1) // 표시될 레이아웃 아이디
-        tabhost.addTab(tab1) //탭호스트에 추가
-
-        val tab2 = tabhost.newTabSpec("범계") //구분할때 사용하는 것
-        tab2.setIndicator("범계") //표시될 이름
-        tab2.setContent(R.id.linear2) // 표시될 레이아웃 아이디
-        tabhost.addTab(tab2) //탭호스트에 추가
-
-        val tab3 = tabhost.newTabSpec("시외") //구분할때 사용하는 것
-        tab3.setIndicator("장거리") //표시될 이름
-        tab3.setContent(R.id.linear3) // 표시될 레이아웃 아이디
-        tabhost.addTab(tab3) //탭호스트에 추가
-
-        tabhost.currentTab = 0
-
-        binding.fabcommon.fabadd.setOnClickListener {
-            toggleFab()
-        }
-
-        val btnfloating =
-            arrayOf(binding.fabcommon.fabhuman, binding.fabcommon.fabpay) //floating button 클릭 리스너
-        for (i: Int in 0 until btnfloating.size) {
-            btnfloating[i].setOnClickListener(fabListener())
-        }
-
-
-    }
-
+class FloatButton : MainActivity() {
 
     // fab 버튼 클릭했을때
-    open fun fabListener(): View.OnClickListener = View.OnClickListener { view: View? ->
+    override fun fabListener(): View.OnClickListener = View.OnClickListener { view: View? ->
         when (view?.id) {
             R.id.fabhuman -> {
                 val inflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -81,14 +36,13 @@ open class MainActivity : AppCompatActivity() {
             R.id.fabpay -> {
                 startActivity(Intent(this, LongDistanceBusActivity::class.java))
                 overridePendingTransition(R.anim.slide_up_out, R.anim.slide_up_in)
-                finish()
-
             }
         }
     }
 
 
-    private fun toggleFab() {
+    fun toggleFab() {
+
 
         // 플로팅 액션 버튼 닫기 - 열려있는 플로팅 버튼 집어넣는 애니메이션
         if (isFabOpen) {
@@ -109,7 +63,4 @@ open class MainActivity : AppCompatActivity() {
         isFabOpen = !isFabOpen
     }
 
-
 }
-
-
