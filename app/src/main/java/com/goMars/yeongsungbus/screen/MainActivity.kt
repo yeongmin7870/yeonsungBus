@@ -115,6 +115,23 @@ open class MainActivity : AppCompatActivity() {
         overridePendingTransition(R.anim.slide_up_out, R.anim.slide_up_in)
     }
 
+    // 뒤로가기 2번
+    private var backPressedTime : Long = 0
+    override fun onBackPressed() {
+
+        // 2초내 다시 클릭하면 앱 종료
+        if (System.currentTimeMillis() - backPressedTime < 2000) {
+            finishAffinity();
+            System.runFinalization();
+            System.exit(0);
+            return
+        }
+
+        // 처음 클릭 메시지
+        Toast.makeText(this, "'뒤로' 버튼을 한번 더 누르시면 앱이 종료됩니다.", Toast.LENGTH_SHORT).show()
+        backPressedTime = System.currentTimeMillis()
+
+    }
 
 }
 
