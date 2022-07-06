@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#F6FAFF"
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".screen.MainActivity">
@@ -26,6 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_marginTop="?attr/actionBarSize"
                 android:background="@drawable/custom_app_bar_background"
                 android:orientation="vertical"
                 app:layout_anchor="@+id/appBarLayout"
@@ -111,7 +112,7 @@
                     <LinearLayout
                         android:id="@+id/threecontent"
                         android:layout_width="match_parent"
-                        android:layout_height="160dp"
+                        android:layout_height="150dp"
                         android:layout_below="@+id/tablecontent"
                         android:layout_centerInParent="true"
                         android:background="@drawable/border"
@@ -459,7 +460,12 @@
                 android:padding="6dp"
                 android:src="@drawable/ic_baseline_search_24" />
         </FrameLayout>
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/welcomeotfbold"
+            android:text="한 눈에 확인! 내 정류장"/>
         <FrameLayout
             android:layout_width="40dp"
             android:layout_height="40dp"
