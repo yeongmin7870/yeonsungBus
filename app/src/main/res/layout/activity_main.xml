@@ -405,18 +405,536 @@
                                 android:id="@+id/linear3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="#FFF1C4"
-                                android:gravity="center"
+                                android:background="@drawable/border"
                                 android:orientation="vertical">
 
-                                <TextView
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:fontFamily="@font/welcomeotfregular"
-                                    android:padding="10dp"
-                                    android:text="@string/dummyText"
-                                    android:textColor="@color/black"
-                                    android:textSize="25dp" />
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="인천 남동구"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#4FCD6B"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="모래내시장역 4번출구버스정류장 08:00"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="인천 남동구"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#4FCD6B"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left|center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="만수역 4번출구 버스정류장 08:03"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="인천 남동구"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#4FCD6B"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left|center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="남동구청역 3번출구 만월중학교 버스정류장 08:10"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="인천 남동구"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#4FCD6B"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left|center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="시흥 신천역 5번출구 앞 도로변 08:22"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:background="#FFF6FAFF"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="경기도 시흥시"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#28FFBC"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="시화공단 이마트 건너편 버스정류장 08:00"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="경기도 시흥시"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#28FFBC"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="정왕역 2번출구 한우직판장 08:04"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="경기도 시흥시"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#28FFBC"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="장곡고교 앞 동양덱스빌아파트 버스정류장 08:13"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="경기도 시흥시"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#28FFBC"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="장곡중학교 대우아파트 버스정류장 08:18"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="경기도 시흥시"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#28FFBC"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="시흥능곡역 SK시흥주유소 앞 08:25"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="경기도 시흥시"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#28FFBC"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="시흥시청역 2번출구 건너편 버스정류장 08:28"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="경기도 시흥시"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#28FFBC"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="시흥등기소입구 삼거리 08:31"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:background="#FFF6FAFF"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="서울 목동"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#06DA7E"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="서울남부지방법원 버스정류장(진명여고 방향) 08:00"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="서울 목동"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#06DA7E"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="진명여고 08:02"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="서울 목동"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#06DA7E"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="목동역 5번출구 08:05"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="서울 목동"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#06DA7E"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="오목교역 4번출구 08:12"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="서울 목동"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#06DA7E"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="철산13단지버스정류장 08:27"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="서울 목동"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp"
+                                        android:background="#06DA7E"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/welcomeotfregular"
+                                        android:padding="10dp"
+                                        android:text="석수역 1번출구 08:45"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+
 
                             </LinearLayout>
 
