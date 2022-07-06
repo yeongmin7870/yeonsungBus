@@ -26,6 +26,9 @@ open class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.imgGps.setOnClickListener(btngps())
+
+
         val tabhost: TabHost = findViewById<TabHost>(R.id.tabhost)
         tabhost.setup()
 
@@ -81,8 +84,6 @@ open class MainActivity : AppCompatActivity() {
             R.id.fabpay -> {
                 startActivity(Intent(this, LongDistanceBusActivity::class.java))
                 overridePendingTransition(R.anim.slide_up_out, R.anim.slide_up_in)
-                finish()
-
             }
         }
     }
@@ -107,6 +108,11 @@ open class MainActivity : AppCompatActivity() {
                 .apply { start() }
         }
         isFabOpen = !isFabOpen
+    }
+
+    private fun btngps(): View.OnClickListener = View.OnClickListener { view ->
+        startActivity(Intent(this, LongDistanceBusActivity::class.java))
+        overridePendingTransition(R.anim.slide_up_out, R.anim.slide_up_in)
     }
 
 

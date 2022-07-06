@@ -29,7 +29,6 @@ class LongDistanceBusActivity : AppCompatActivity() {
         binding.imgBack.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this,MainActivity::class.java))
             overridePendingTransition(R.anim.slide_up_out, R.anim.slide_up_in)
-            finish()
         })
 
         binding.btnpaco.setOnClickListener(View.OnClickListener {
@@ -77,11 +76,6 @@ class LongDistanceBusActivity : AppCompatActivity() {
                     return@OnTouchListener true
                 })
 
-            }
-            R.id.fabpay -> {
-                startActivity(Intent(this, LongDistanceBusActivity::class.java))
-                overridePendingTransition(R.anim.slide_up_out, R.anim.slide_up_in)
-                finish()
             }
         }
     }
