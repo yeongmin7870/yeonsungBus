@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.goMars.yeongsungbus">
 
-    <queries>
-        <package android:name="com.nhnent.payapp" />
-    </queries>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
 
     <application
         android:allowBackup="true"
@@ -13,9 +13,13 @@
         android:roundIcon="@mipmap/ic_yeonsung_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.YeongsungBus">
+        <activity
+            android:name=".SettingGpsActivity"
+            android:exported="false" />
+
         <uses-library
             android:name="org.apache.http.legacy"
-            android:required="false"/>
+            android:required="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
