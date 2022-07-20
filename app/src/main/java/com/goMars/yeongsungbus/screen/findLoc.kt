@@ -1,22 +1,45 @@
 package com.goMars.yeongsungbus.screen
 
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import com.goMars.yeongsungbus.R
 import com.goMars.yeongsungbus.databinding.ActivityFindLocBinding
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
+import com.google.android.gms.maps.model.LatLng
 
 class findLoc : AppCompatActivity() {
     lateinit var binding: ActivityFindLocBinding
     val Tag: String = "findLocTest" // Log 찍을때 Tag
     val MY_PERMISSION_ACCESS_ALL = 100  //권한 창 생성 여부 판단 변수
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
+    lateinit var lat: String
+    lateinit var lng: String
+    lateinit var location: Location
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityFindLocBinding.inflate(layoutInflater) // 뷰바인딩 인스턴스
         setContentView(binding.root) // 뷰바인딩 루트로 뷰 생성
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+
+        fusedLocationClient.lastLocation
+            .addOnSuccessListener { loc: Location? ->
+                location = loc!!
+                lat = location!!.latitude.toString()
+                lng = location!!.longitude.toString()
+                Log.d(Tag, "lat: ${location!!.latitude} loc: ${location!!.longitude}")
+            }
+
 
         binding.btnAdr.setOnClickListener(findAdr()) //위치 확인 버튼
 
@@ -53,15 +76,15 @@ class findLoc : AppCompatActivity() {
         if (requestCode == MY_PERMISSION_ACCESS_ALL) { //requestCode == 100 이고
             if (grantResults.size > 0) {  // 승인결과 값이 존재하면
                 for (grant in grantResults) { // 승인결과 배열 객체 안에있는 승인값들을 하나씩 반복
-                    if (grant != PackageManager.PERMISSION_GRANTED) System.exit(0)
+                    if (grant != PackageManager.PERMISSION_GRANTED) finish()
                     // 이용자가 승인 거부 시 앱 종료
                 }
             }
         }
     }
 
-    fun findAdr(): View.OnClickListener = View.OnClickListener {
-
+    private fun findAdr(): View.OnClickListener = View.OnClickListener { view ->
+        Toast.makeText(this.applicationContext,"lat: ${location!!.latitude} lng: ${location!!.longitude}", Toast.LENGTH_SHORT).show()
     }
 }
 
