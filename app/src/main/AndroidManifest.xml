@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,9 +13,6 @@
         android:roundIcon="@mipmap/ic_yeonsung_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.YeongsungBus">
-        <activity
-            android:name=".SettingGpsActivity"
-            android:exported="false" />
 
         <uses-library
             android:name="org.apache.http.legacy"
@@ -34,12 +31,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="YOUR_API_KEY" />
-
-        <activity
-            android:name=".screen.SettingGpsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_setting_gps" />
-
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@xml/floating_button" />
@@ -58,6 +49,9 @@
             android:exported="false" />
         <activity
             android:name=".screen.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.findLoc"
             android:exported="false" />
     </application>
 

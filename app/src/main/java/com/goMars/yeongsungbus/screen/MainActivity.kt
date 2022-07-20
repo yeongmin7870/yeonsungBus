@@ -111,7 +111,7 @@ open class MainActivity : AppCompatActivity() {
     }
 
     private fun btngps(): View.OnClickListener = View.OnClickListener { view ->
-        startActivity(Intent(this, SettingGpsActivity::class.java))
+        startActivity(Intent(this, findLoc::class.java))
         overridePendingTransition(R.anim.slide_up_out, R.anim.slide_up_in)
     }
 
